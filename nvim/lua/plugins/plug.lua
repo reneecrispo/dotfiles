@@ -27,6 +27,7 @@ Plug 'nvim-pack/nvim-spectre'
 
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 ]])
