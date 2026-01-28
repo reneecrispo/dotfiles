@@ -1,0 +1,26 @@
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+
+Website: https://www.macports.org/install.php
+
+sudo port version
+sudo port selfupdate
+
+sudo port install git
+
+sudo port install cmake
+
+sudo port install gcc15
+
+sudo port install python313
+sudo port select --set python python313
+sudo port select --set python3 python313
+python3 -m ensurepip --upgrade
+python3 -m pip install numpy
+
+sudo port install boost
+
+sudo port install openmpi-gcc15
+
+sudo port install petsc
+
+python3 ./config/configure.py COPTFLAGS="-O3" CXXOPTFLAGS="-O3" FOPTFLAGS="-O3" --with-mpiexec=/opt/local/bin/mpiexec --download-metis --download-parmetis --download-scalapack --download-mumps --with-debugging=0 --with-log=0 --with-x=0

@@ -1,0 +1,3 @@
+sudo port install neovim
+
+sudo port install lazygit
