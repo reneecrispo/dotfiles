@@ -11,9 +11,9 @@ vim.api.nvim_set_keymap('n', 'gi', '<Plug>(coc-implementation)', {})
 vim.api.nvim_set_keymap('n', 'gr', '<Plug>(coc-references)', {})
 
 -- Clipboard yank / paste
-vim.api.nvim_set_keymap('n', '<Leader>y', '+y', opts)
-vim.api.nvim_set_keymap('v', '<Leader>y', '+y', opts)
-vim.api.nvim_set_keymap('n', '<Leader>p', '+p', opts)
+vim.api.nvim_set_keymap('n', '<Leader>y', '"+y', opts)
+vim.api.nvim_set_keymap('v', '<Leader>y', '"+y', opts)
+vim.api.nvim_set_keymap('n', '<Leader>p', '"+p', opts)
 
 -- Delete without yanking
 vim.keymap.set("n", "dd", '"_dd', vim.tbl_extend("force", opts, { desc = "Delete line without yanking" }))
@@ -26,10 +26,10 @@ vim.keymap.set("v", "d", '"_d', vim.tbl_extend("force", opts, { desc = "Delete s
 vim.keymap.set("v", "x", '"_x', vim.tbl_extend("force", opts, { desc = "Delete selection without yanking" }))
 
 -- Telescope (find)
-map("n", "<Leader>ff", "<cmd>Telescope find_files<cr>", opts)
-map("n", "<Leader>fg", "<cmd>Telescope live_grep<cr>", opts)
-map("n", "<Leader>fb", "<cmd>Telescope buffers<cr>", opts)
-map("n", "<Leader>fh", "<cmd>Telescope help_tags<cr>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>ff", "<cmd>Telescope find_files<cr>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>fb", "<cmd>Telescope buffers<cr>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>fh", "<cmd>Telescope help_tags<cr>", opts)
 
 -- Spectre find and replace
 vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
