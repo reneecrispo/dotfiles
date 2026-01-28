@@ -1,6 +1,7 @@
 -- Load general settings
 require("core.options")
 require("core.keymap")
+require("core.path")
 
 -- Load plugin specific configs
 require("plugins.plug")
@@ -10,3 +11,4 @@ require("plugins.copilot")
 require("plugins.copilotChat")
 require("plugins.cyberdream")
 require("plugins.telescope")
+require("plugins.lazygit")

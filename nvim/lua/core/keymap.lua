@@ -20,8 +20,7 @@ vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual(
 vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = "Search on current file" })
 
 -- LazyGit
-vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "LazyGit" })
-vim.keymap.set("n", "<leader>gf", "<cmd>LazyGitCurrentFile<cr>", { desc = "LazyGit current file" })
-vim.keymap.set("n", "<leader>gl", "<cmd>LazyGitLog<cr>", { desc = "LazyGit log" })
-vim.keymap.set("n", "<leader>gb", "<cmd>LazyGitFilter<cr>", { desc = "LazyGit branch filter" })
-vim.keymap.set("n", "<leader>gc", "<cmd>LazyGitFilterCurrentFile<cr>", { desc = "LazyGit commits (file)" })
+vim.keymap.set("n", "<leader>gg", function()
+  vim.cmd("tabnew | terminal lazygit | quit")
+end, { desc = "Open LazyGit in tab" })
+
