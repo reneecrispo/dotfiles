@@ -1,6 +1,6 @@
-# Config files 
+# Configure files
 
-## Installation
+## Neovim nstallation
 
 - Backup of your nvim dotfiles:
   
