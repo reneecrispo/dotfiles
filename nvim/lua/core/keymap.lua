@@ -25,6 +25,12 @@ vim.keymap.set("n", "dW", '"_dW', vim.tbl_extend("force", opts, { desc = "Delete
 vim.keymap.set("v", "d", '"_d', vim.tbl_extend("force", opts, { desc = "Delete selection without yanking" }))
 vim.keymap.set("v", "x", '"_x', vim.tbl_extend("force", opts, { desc = "Delete selection without yanking" }))
 
+-- Telescope (find)
+map("n", "<Leader>ff", "<cmd>Telescope find_files<cr>", opts)
+map("n", "<Leader>fg", "<cmd>Telescope live_grep<cr>", opts)
+map("n", "<Leader>fb", "<cmd>Telescope buffers<cr>", opts)
+map("n", "<Leader>fh", "<cmd>Telescope help_tags<cr>", opts)
+
 -- Spectre find and replace
 vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre" })
 vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "Search current word" })
