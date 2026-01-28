@@ -1,4 +1,5 @@
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH="/Applications/ParaView-6.0.1.app/Contents/MacOS:$PATH"
 
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
