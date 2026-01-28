@@ -1,8 +1,7 @@
 require("bufferline").setup{
   options = {
-    -- esempio opzioni minime:
     numbers = "none",
-    close_command = "bdelete! %d",       -- chiude buffer
+    close_command = "bdelete! %d",      
     right_mouse_command = "bdelete! %d",
     show_buffer_close_icons = true,
     show_close_icon = true,

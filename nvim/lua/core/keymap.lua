@@ -39,6 +39,10 @@ vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({sele
 vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word" })
 vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = "Search on current file" })
 
+-- Switch between buffers
+vim.api.nvim_set_keymap("n", "<Leader>bn", ":bn<CR>", { noremap = true, silent = true }) -- next buffer
+vim.api.nvim_set_keymap("n", "<Leader>bb", ":bp<CR>", { noremap = true, silent = true }) -- previous buffer
+
 -- LazyGit
 vim.keymap.set("n", "<leader>gg", function()
   vim.cmd("tabnew | terminal lazygit | quit")
