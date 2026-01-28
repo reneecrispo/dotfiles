@@ -25,5 +25,8 @@ Plug 'MunifTanjim/nui.nvim'
 
 Plug 'nvim-pack/nvim-spectre'
 
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
+
 call plug#end()
 ]])
