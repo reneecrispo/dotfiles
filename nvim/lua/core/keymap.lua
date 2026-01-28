@@ -26,7 +26,9 @@ vim.keymap.set("v", "d", '"_d', vim.tbl_extend("force", opts, { desc = "Delete s
 vim.keymap.set("v", "x", '"_x', vim.tbl_extend("force", opts, { desc = "Delete selection without yanking" }))
 
 -- Telescope (find)
-vim.api.nvim_set_keymap("n", "<Leader>ff", "<cmd>Telescope find_files<cr>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>ff", "", { noremap = true, silent = true, callback = function()
+ require('telescope.builtin').find_files({ hidden = true })
+end })
 vim.api.nvim_set_keymap("n", "<Leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 vim.api.nvim_set_keymap("n", "<Leader>fb", "<cmd>Telescope buffers<cr>", opts)
 vim.api.nvim_set_keymap("n", "<Leader>fh", "<cmd>Telescope help_tags<cr>", opts)

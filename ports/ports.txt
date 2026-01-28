@@ -1,3 +1,5 @@
 sudo port install neovim
 
 sudo port install lazygit
+
+sudo port install ripgrep
