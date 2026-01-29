@@ -51,6 +51,5 @@ PROMPT="%F{cyan}%n%f %F{yellow}@%f %F{green}%m%f %F{magenta}%1~%f %F{blue}%{$vcs
 pfetch
 
 # fzf
-
-source /opt/local/share/fzf/ssell/key-bindings.zsh
-source /opt/local/share/fzf/shell/completion.zsh
+[ -f /opt/local/share/fzf/key-bindings.zsh ] && source /opt/local/share/fzf/key-bindings.zsh
+[ -f /opt/local/share/fzf/completion.zsh ] && source /opt/local/share/fzf/completion.zsh
