@@ -17,5 +17,9 @@ ln -s path/where/you/cloned/this/repo/nvim .
 ```
 - Install all the plugins in nvim:
 ```Bash
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+```Bash
 :PlugInstall
 ```
