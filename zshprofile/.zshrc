@@ -1,5 +1,4 @@
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH="/Applications/ParaView-6.0.1.app/Contents/MacOS:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # iTerm2 integration
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -44,8 +43,7 @@ zstyle ':vcs_info:git:*' hooks git-dirty
 precmd() { vcs_info }
 
 # Prompt
-PROMPT="%F{cyan}%n%f %F{yellow}@%f %F{green}%m%f %F{magenta}%1~%f %F{blue}%{$vcs_info_msg_0_%}%f %F{white}%#%f "
-
+PROMPT="%F{cyan}%n%f %F{yellow}@%f %F{green}%m%f %F{magenta}%1~%f %F{white}%#%f "
 
 # Run pfetch on terminal start
 pfetch
@@ -53,3 +51,24 @@ pfetch
 # fzf
 [ -f /opt/local/share/fzf/key-bindings.zsh ] && source /opt/local/share/fzf/key-bindings.zsh
 [ -f /opt/local/share/fzf/completion.zsh ] && source /opt/local/share/fzf/completion.zsh
+
+# petsc
+export PETSC_DIR=/opt/local/lib/petsc
+
+# rmtrash
+alias rm='rmtrash'
+
+export PATH="/Library/TeX/texbin:$PATH"
+
+alias vizir4="/Applications/vizir4.app/Contents/MacOS/vizir4"
+
+# FreeFem
+export PATH="/Applications/FreeFem++.app/Contents/MacOS:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Alias for MasterFSI
+alias MasterFSI="/Users/rcrispo/Projects/MasterFSIContact/bin/Release/ZMQ/bin/MasterFSI" 

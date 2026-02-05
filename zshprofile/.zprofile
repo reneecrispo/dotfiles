@@ -1,9 +1,19 @@
-# MacPorts Installer addition on 2026-01-09_at_15:47:04: adding an appropriate PATH variable for use with MacPorts.
+export PATH="$HOME/bin:$PATH"
+
+# Base system paths (do not remove)
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin"
+
+# MacPorts
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
 
+# Python user scripts
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 
-# MacPorts Installer addition on 2026-01-22_at_19:42:47: adding an appropriate PATH variable for use with MacPorts.
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
-# Finished adapting your PATH environment variable for use with MacPorts.
+# ParaView
+export PATH="/Applications/ParaView-6.0.1.app/Contents/MacOS:$PATH"
 
+# PETSc
+export PETSC_DIR=/opt/local/lib/petsc
+
+# Python
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
