@@ -1,26 +1,16 @@
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
-
-Website: https://www.macports.org/install.php
-
-sudo port version
-sudo port selfupdate
-
-sudo port install git
-
-sudo port install cmake
-
-sudo port install gcc15
-
-sudo port install python313
-sudo port select --set python python313
-sudo port select --set python3 python313
-python3 -m ensurepip --upgrade
-python3 -m pip install numpy
-
-sudo port install boost
-
-sudo port install openmpi-gcc15
-
-sudo port install petsc
-
-python3 ./config/configure.py COPTFLAGS="-O3" CXXOPTFLAGS="-O3" FOPTFLAGS="-O3" --with-mpiexec=/opt/local/bin/mpiexec --download-metis --download-parmetis --download-scalapack --download-mumps --with-debugging=0 --with-log=0 --with-x=0
+  boost188 @1.88.0_1+clang20+mpich+no_single+no_static+python313 (active)
+  mpich-clang20 @4.3.2_0+gcc15 (active)
+  mumps @5.7.3_1+clang20+gfortran+mpich+openblas (active)
+  parmetis @20230326_0+clang20+mpich (active)
+  petsc @3.22.1_1+clang20+hwloc+mpich+mumps+openblas+parmetis+suitesparse+superlu (active)
+  scalapack @2.2.2_1+clang20+gfortran+mpich+openblas (active)
+  scotch @7.0.5_0+clang20+mpich (active)
+  SuiteSparse_AMD @3.3.4_0+clang20 (active)
+  SuiteSparse_BTF @2.3.3_0+clang20 (active)
+  SuiteSparse_CAMD @3.3.5_0+clang20 (active)
+  SuiteSparse_CCOLAMD @3.3.5_0+clang20 (active)
+  SuiteSparse_CHOLMOD @5.3.4_0+clang20+openblas (active)
+  SuiteSparse_COLAMD @3.3.5_0+clang20 (active)
+  SuiteSparse_config @7.12.1_0+clang20+openblas (active)
+  SuiteSparse_KLU @2.3.6_0+clang20 (active)
+  superlu @5.2.2_1+clang20+openblas (active)
